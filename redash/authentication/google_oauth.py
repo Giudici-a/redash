@@ -5,6 +5,7 @@ from flask_login import login_user
 from flask_oauthlib.client import OAuth
 from sqlalchemy.orm.exc import NoResultFound
 
+
 from redash import models, settings
 from redash.authentication.org_resolving import current_org
 
@@ -12,6 +13,7 @@ logger = logging.getLogger('google_oauth')
 
 oauth = OAuth()
 blueprint = Blueprint('google_oauth', __name__)
+
 
 
 def google_remote_app():
@@ -58,22 +60,26 @@ def verify_profile(org, profile):
     return False
 
 
-def create_and_login_user(org, name, email, picture=None):
+def create_and_login_user(org, name, email=None, picture=None):
     try:
-        user_object = models.User.get_by_email_and_org(email, org)
+        user_object = models.User.get_by_name_and_org(name, org)
         if user_object.name != name:
             logger.debug("Updating user name (%r -> %r)", user_object.name, name)
             user_object.name = name
             models.db.session.commit()
     except NoResultFound:
         logger.debug("Creating user object (%r)", name)
-        user_object = models.User(org=org, name=name, email=email, _profile_image_url=picture,
+        if email is not None:
+            user_object = models.User(org=org, name=name, email=email, password_ldap=False,_profile_image_url=picture,
                                   group_ids=[org.default_group.id])
+        else:
+            email = name + '@adotmob_ldap.com'
+            user_object = models.User(org=org, name=name, email=email, password_ldap=True, _profile_image_url=picture,
+                                      group_ids=[org.default_group.id])
         models.db.session.add(user_object)
         models.db.session.commit()
-
+    print user_object.to_dict()
     login_user(user_object, remember=True)
-
     return user_object
 
 

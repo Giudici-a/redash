@@ -436,6 +436,7 @@ class User(TimestampMixin, db.Model, BelongsToOrgMixin, UserMixin, PermissionsCh
     org = db.relationship(Organization, backref=db.backref("users", lazy="dynamic"))
     name = Column(db.String(320))
     email = Column(LowercasedString)
+    password_ldap = Column('password_ldap', db.Boolean, default=False)
     _profile_image_url = Column('profile_image_url', db.String(320), nullable=True)
     password_hash = Column(db.String(128), nullable=True)
     # XXX replace with association table
@@ -445,7 +446,7 @@ class User(TimestampMixin, db.Model, BelongsToOrgMixin, UserMixin, PermissionsCh
                      unique=True)
 
     __tablename__ = 'users'
-    __table_args__ = (db.Index('users_org_id_email', 'org_id', 'email', unique=True),)
+    __table_args__ = (db.Index('users_org_id_email', 'org_id', 'email', 'name', unique=True),)
 
     def __init__(self, *args, **kwargs):
         if kwargs.get('email') is not None:
@@ -495,6 +496,10 @@ class User(TimestampMixin, db.Model, BelongsToOrgMixin, UserMixin, PermissionsCh
         return cls.query.filter(cls.email == email, cls.org == org).one()
 
     @classmethod
+    def get_by_name_and_org(cls, name, org):
+        return cls.query.filter(cls.name == name, cls.org == org).one()
+
+    @classmethod
     def get_by_api_key_and_org(cls, api_key, org):
         return cls.query.filter(cls.api_key == api_key, cls.org == org).one()
 
@@ -511,6 +516,9 @@ class User(TimestampMixin, db.Model, BelongsToOrgMixin, UserMixin, PermissionsCh
 
     def hash_password(self, password):
         self.password_hash = pwd_context.encrypt(password)
+
+    def verify_ldap_password(self, password):
+        return self.password_ldap and pwd_context.verify(password, self.password_ldap)
 
     def verify_password(self, password):
         return self.password_hash and pwd_context.verify(password, self.password_hash)

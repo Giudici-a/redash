@@ -1,0 +1,1269 @@
+postgres: could not access directory "/usr/local/pgsql/data": No such file or directory
+Run initdb or pg_basebackup to initialize a PostgreSQL data directory.
+2018-05-11 09:53:56.713 CEST [6801] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-11 09:53:56.713 CEST [6801] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-11 09:53:56.714 CEST [6801] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-11 09:53:56.737 CEST [6802] LOG:  database system was shut down at 2018-05-09 19:05:21 CEST
+2018-05-11 09:53:56.741 CEST [6801] LOG:  database system is ready to accept connections
+2018-05-11 10:58:56.546 CEST [9579] LOG:  unexpected EOF on client connection with an open transaction
+2018-05-11 15:28:31.140 CEST [15768] LOG:  unexpected EOF on client connection with an open transaction
+2018-05-11 16:42:31.848 CEST [10924] ERROR:  relation "queries" does not exist at character 949
+2018-05-11 16:42:31.848 CEST [10924] STATEMENT:  SELECT queries.query AS queries_query, queries.updated_at AS queries_updated_at, queries.created_at AS queries_created_at, queries.id AS queries_id, queries.version AS queries_version, queries.org_id AS queries_org_id, queries.data_source_id AS queries_data_source_id, queries.latest_query_data_id AS queries_latest_query_data_id, queries.name AS queries_name, queries.description AS queries_description, queries.query_hash AS queries_query_hash, queries.api_key AS queries_api_key, queries.user_id AS queries_user_id, queries.last_modified_by_id AS queries_last_modified_by_id, queries.is_archived AS queries_is_archived, queries.is_draft AS queries_is_draft, queries.schedule AS queries_schedule, queries.schedule_failures AS queries_schedule_failures, queries.options AS queries_options, queries.search_vector AS queries_search_vector, query_results_1.id AS query_results_1_id, query_results_1.retrieved_at AS query_results_1_retrieved_at 
+	FROM queries LEFT OUTER JOIN query_results AS query_results_1 ON query_results_1.id = queries.latest_query_data_id 
+	WHERE queries.schedule IS NOT NULL ORDER BY queries.id
+2018-05-11 16:44:17.993 CEST [18415] LOG:  unexpected EOF on client connection with an open transaction
+2018-05-11 18:08:49.884 CEST [6801] LOG:  received smart shutdown request
+2018-05-11 18:08:49.887 CEST [6801] LOG:  worker process: logical replication launcher (PID 6808) exited with exit code 1
+2018-05-11 18:08:49.887 CEST [6803] LOG:  shutting down
+2018-05-11 18:08:49.893 CEST [6801] LOG:  database system is shut down
+2018-05-11 18:11:23.952 CEST [1141] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-11 18:11:23.952 CEST [1141] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-11 18:11:23.952 CEST [1141] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-11 18:11:23.973 CEST [1142] LOG:  database system was shut down at 2018-05-11 18:08:49 CEST
+2018-05-11 18:11:23.977 CEST [1141] LOG:  database system is ready to accept connections
+2018-05-11 18:15:35.814 CEST [1620] LOG:  unexpected EOF on client connection with an open transaction
+2018-05-11 18:41:44.832 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:44.832 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.476 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.476 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.488 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.488 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.610 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.610 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.617 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.617 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.627 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.627 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.632 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.632 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.637 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.637 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.642 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.642 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.650 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.650 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.662 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.662 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.667 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.667 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.673 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.673 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.681 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.681 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.686 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.686 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.692 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.692 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.697 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.697 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.702 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.702 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.708 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.708 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.714 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.714 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.725 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.725 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.731 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.731 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.735 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.735 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.743 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.743 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.747 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.747 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.752 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.752 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.758 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.758 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.764 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.764 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.770 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.770 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.777 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.777 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.794 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.794 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.800 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.800 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.807 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.807 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.813 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.813 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.818 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.818 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.824 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.824 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:48.832 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:48.832 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.295 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.295 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.308 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.308 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.402 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.402 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.410 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.410 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.415 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.415 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.423 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.423 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.428 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.428 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.433 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.433 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.438 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.438 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.444 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.444 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.448 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.448 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.454 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.454 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.458 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.458 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.476 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.476 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.480 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.480 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.485 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.485 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.492 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.492 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.498 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.498 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.502 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.502 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.508 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.508 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.512 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.512 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.520 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.520 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.525 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.525 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.531 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.531 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.542 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.542 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.547 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.547 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.551 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.551 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.558 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.558 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.563 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.563 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.569 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.569 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.575 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.575 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.581 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.581 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:41:56.591 CEST [2713] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:41:56.591 CEST [2713] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:08.789 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:08.789 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:08.854 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:08.854 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:08.879 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:08.879 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.027 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.027 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.034 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.034 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.052 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.052 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.056 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.056 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.064 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.064 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.069 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.069 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.073 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.073 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.078 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.078 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.083 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.083 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.088 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.088 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.093 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.093 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.098 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.098 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.115 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.115 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.121 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.121 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.126 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.126 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.131 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.131 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.137 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.137 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.142 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.142 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.150 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.150 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.155 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.155 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.161 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.161 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.166 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.166 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.181 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.181 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.186 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.186 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.192 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.192 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.196 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.196 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.202 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.202 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.207 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.207 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.212 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.212 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.219 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.219 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.225 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.225 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.230 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.230 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.236 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.236 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:42:09.254 CEST [2755] ERROR:  relation "organizations" does not exist at character 293
+2018-05-11 18:42:09.254 CEST [2755] STATEMENT:  SELECT organizations.updated_at AS organizations_updated_at, organizations.created_at AS organizations_created_at, organizations.id AS organizations_id, organizations.name AS organizations_name, organizations.slug AS organizations_slug, organizations.settings AS organizations_settings 
+	FROM organizations 
+	WHERE organizations.slug = 'default' 
+	 LIMIT 1
+2018-05-11 18:56:05.874 CEST [4301] LOG:  unexpected EOF on client connection with an open transaction
+2018-05-11 19:25:41.730 CEST [1141] LOG:  received smart shutdown request
+2018-05-11 19:25:41.732 CEST [1141] LOG:  worker process: logical replication launcher (PID 1148) exited with exit code 1
+2018-05-11 19:25:41.732 CEST [1143] LOG:  shutting down
+2018-05-11 19:25:41.736 CEST [1141] LOG:  database system is shut down
+2018-05-11 19:56:08.825 CEST [1219] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-11 19:56:08.825 CEST [1219] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-11 19:56:08.825 CEST [1219] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-11 19:56:08.847 CEST [1220] LOG:  database system was shut down at 2018-05-11 19:25:41 CEST
+2018-05-11 19:56:08.853 CEST [1219] LOG:  database system is ready to accept connections
+2018-05-13 22:54:31.893 CEST [1219] LOG:  received smart shutdown request
+2018-05-13 22:54:31.894 CEST [1219] LOG:  worker process: logical replication launcher (PID 1226) exited with exit code 1
+2018-05-13 22:54:31.894 CEST [1221] LOG:  shutting down
+2018-05-13 22:54:31.904 CEST [1219] LOG:  database system is shut down
+2018-05-14 09:54:58.168 CEST [1808] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-14 09:54:58.168 CEST [1808] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-14 09:54:58.168 CEST [1808] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-14 09:54:58.193 CEST [1809] LOG:  database system was shut down at 2018-05-13 22:54:31 CEST
+2018-05-14 09:54:58.197 CEST [1808] LOG:  database system is ready to accept connections
+2018-05-14 14:08:17.652 CEST [8467] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:17.652 CEST [8467] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:37.778 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:37.778 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:37.896 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:37.896 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:37.940 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:37.940 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:37.997 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:37.997 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.012 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.012 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.044 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.044 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.066 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.066 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.083 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.083 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.096 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.096 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.107 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.107 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.119 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.119 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.138 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.138 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.150 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.150 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.162 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.162 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.170 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.170 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.180 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.180 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.188 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.188 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.204 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.204 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.214 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.214 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.223 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.223 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.229 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.229 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.236 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.236 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.243 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.243 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.252 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.252 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.269 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.269 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.279 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.279 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.286 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.286 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.298 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.298 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:08:38.308 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:08:38.308 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.454 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.454 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.468 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.468 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.567 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.567 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.579 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.579 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.589 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.589 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.613 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.613 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.621 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.621 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.630 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.630 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.637 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.637 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.646 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.646 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.654 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.654 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.664 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.664 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.674 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.674 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.684 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.684 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.691 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.691 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.699 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.699 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.707 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.707 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.716 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.716 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.724 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.724 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.740 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.740 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.750 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.750 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.758 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.758 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.767 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.767 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.775 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.775 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.782 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.782 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.793 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.793 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.809 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.809 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.820 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.820 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.829 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.829 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.840 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.840 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.851 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.851 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.861 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.861 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.874 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.874 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.885 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.885 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.894 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.894 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.905 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.905 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.914 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.914 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.925 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.925 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.939 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.939 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.950 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.950 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.957 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.957 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.966 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.966 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.973 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.973 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.982 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.982 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:44.990 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:44.990 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.006 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.006 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.017 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.017 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.025 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.025 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.032 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.032 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.040 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.040 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.047 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.047 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.056 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.056 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.072 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.072 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.081 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.081 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.089 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.089 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.098 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.098 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.104 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.104 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.112 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.112 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.121 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.121 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.151 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.151 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.160 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.160 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.167 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.167 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.175 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.175 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.182 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.182 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.189 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.189 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.206 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.206 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.216 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.216 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.224 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.224 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.232 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.232 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.240 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.240 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.249 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.249 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.255 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.255 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.272 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.272 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.283 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.283 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.291 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.291 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.298 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.298 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.306 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.306 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.314 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.314 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.321 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.321 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.329 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.329 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.341 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.341 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.352 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.352 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.360 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.360 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.368 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.368 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.376 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.376 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.384 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.384 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.392 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.392 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.409 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.409 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.419 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.419 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.427 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.427 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.435 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.435 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.442 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.442 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.450 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.450 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.458 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.458 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.474 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.474 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.484 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.484 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.492 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.492 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.499 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.499 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.507 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.507 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.516 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.516 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.525 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.525 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.540 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.540 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.550 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.550 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.557 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.557 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.566 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.566 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.573 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.573 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.581 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.581 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.589 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.589 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.604 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.604 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.613 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.613 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.622 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.622 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.632 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.632 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.639 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.639 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.646 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.646 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.654 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.654 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.672 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.672 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.681 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.681 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.690 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.690 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.698 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.698 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.705 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.705 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.713 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.713 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.720 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.720 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.731 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.731 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.742 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.742 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.752 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.752 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.759 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.759 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.768 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.768 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.776 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.776 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.784 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.784 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.791 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.791 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.807 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.807 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.817 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.817 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.825 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.825 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.834 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.834 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:09:45.844 CEST [8502] ERROR:  column users.password_ldap does not exist at character 272
+2018-05-14 14:09:45.844 CEST [8502] STATEMENT:  SELECT users.profile_image_url AS users_profile_image_url, users.groups AS users_groups, users.updated_at AS users_updated_at, users.created_at AS users_created_at, users.id AS users_id, users.org_id AS users_org_id, users.name AS users_name, users.email AS users_email, users.password_ldap AS users_password_ldap, users.password_hash AS users_password_hash, users.api_key AS users_api_key 
+	FROM users 
+	WHERE users.id = '2' AND 1 = users.org_id
+2018-05-14 14:10:56.926 CEST [6704] ERROR:  relation "queries" does not exist at character 949
+2018-05-14 14:10:56.926 CEST [6704] STATEMENT:  SELECT queries.query AS queries_query, queries.updated_at AS queries_updated_at, queries.created_at AS queries_created_at, queries.id AS queries_id, queries.version AS queries_version, queries.org_id AS queries_org_id, queries.data_source_id AS queries_data_source_id, queries.latest_query_data_id AS queries_latest_query_data_id, queries.name AS queries_name, queries.description AS queries_description, queries.query_hash AS queries_query_hash, queries.api_key AS queries_api_key, queries.user_id AS queries_user_id, queries.last_modified_by_id AS queries_last_modified_by_id, queries.is_archived AS queries_is_archived, queries.is_draft AS queries_is_draft, queries.schedule AS queries_schedule, queries.schedule_failures AS queries_schedule_failures, queries.options AS queries_options, queries.search_vector AS queries_search_vector, query_results_1.id AS query_results_1_id, query_results_1.retrieved_at AS query_results_1_retrieved_at 
+	FROM queries LEFT OUTER JOIN query_results AS query_results_1 ON query_results_1.id = queries.latest_query_data_id 
+	WHERE queries.schedule IS NOT NULL ORDER BY queries.id
+2018-05-14 14:36:01.269 CEST [9531] ERROR:  relation "queries" does not exist at character 949
+2018-05-14 14:36:01.269 CEST [9531] STATEMENT:  SELECT queries.query AS queries_query, queries.updated_at AS queries_updated_at, queries.created_at AS queries_created_at, queries.id AS queries_id, queries.version AS queries_version, queries.org_id AS queries_org_id, queries.data_source_id AS queries_data_source_id, queries.latest_query_data_id AS queries_latest_query_data_id, queries.name AS queries_name, queries.description AS queries_description, queries.query_hash AS queries_query_hash, queries.api_key AS queries_api_key, queries.user_id AS queries_user_id, queries.last_modified_by_id AS queries_last_modified_by_id, queries.is_archived AS queries_is_archived, queries.is_draft AS queries_is_draft, queries.schedule AS queries_schedule, queries.schedule_failures AS queries_schedule_failures, queries.options AS queries_options, queries.search_vector AS queries_search_vector, query_results_1.id AS query_results_1_id, query_results_1.retrieved_at AS query_results_1_retrieved_at 
+	FROM queries LEFT OUTER JOIN query_results AS query_results_1 ON query_results_1.id = queries.latest_query_data_id 
+	WHERE queries.schedule IS NOT NULL ORDER BY queries.id
+2018-05-14 14:38:32.941 CEST [9892] ERROR:  relation "queries" does not exist at character 949
+2018-05-14 14:38:32.941 CEST [9892] STATEMENT:  SELECT queries.query AS queries_query, queries.updated_at AS queries_updated_at, queries.created_at AS queries_created_at, queries.id AS queries_id, queries.version AS queries_version, queries.org_id AS queries_org_id, queries.data_source_id AS queries_data_source_id, queries.latest_query_data_id AS queries_latest_query_data_id, queries.name AS queries_name, queries.description AS queries_description, queries.query_hash AS queries_query_hash, queries.api_key AS queries_api_key, queries.user_id AS queries_user_id, queries.last_modified_by_id AS queries_last_modified_by_id, queries.is_archived AS queries_is_archived, queries.is_draft AS queries_is_draft, queries.schedule AS queries_schedule, queries.schedule_failures AS queries_schedule_failures, queries.options AS queries_options, queries.search_vector AS queries_search_vector, query_results_1.id AS query_results_1_id, query_results_1.retrieved_at AS query_results_1_retrieved_at 
+	FROM queries LEFT OUTER JOIN query_results AS query_results_1 ON query_results_1.id = queries.latest_query_data_id 
+	WHERE queries.schedule IS NOT NULL ORDER BY queries.id
+2018-05-14 14:39:09.269 CEST [9914] ERROR:  null value in column "password_ldap" violates not-null constraint
+2018-05-14 14:39:09.269 CEST [9914] DETAIL:  Failing row contains (2018-05-14 14:39:09.268502+02, 2018-05-14 14:39:09.268502+02, 1, 1, Admin, aurelien.giudici@adotmob.com, null, null, $6$rounds=94777$or9kQJ5XqFNkZ5AP$YF2QymZJYRJX5GwKt0p4K/zzPqM7ITY..., {1,2}, XmmHqTZXAyaaHCm8jTd0Cy61dyTRFv9ZNjz9tCRQ).
+2018-05-14 14:39:09.269 CEST [9914] STATEMENT:  INSERT INTO users (updated_at, created_at, org_id, name, email, password_ldap, profile_image_url, password_hash, groups, api_key) VALUES (now(), now(), 1, 'Admin', 'aurelien.giudici@adotmob.com', NULL, NULL, '$6$rounds=94777$or9kQJ5XqFNkZ5AP$YF2QymZJYRJX5GwKt0p4K/zzPqM7ITYU8dhJ7z9QEeo71bIqqTvKvfwf5aNN8Jjcza4V0TF/Vn3d.xkFnt06k.', ARRAY[1, 2], 'XmmHqTZXAyaaHCm8jTd0Cy61dyTRFv9ZNjz9tCRQ') RETURNING users.id
+2018-05-14 14:44:48.184 CEST [10337] ERROR:  duplicate key value violates unique constraint "users_org_id_email"
+2018-05-14 14:44:48.184 CEST [10337] DETAIL:  Key (org_id, email)=(1, aurelien.giudici@adotmob.com) already exists.
+2018-05-14 14:44:48.184 CEST [10337] STATEMENT:  INSERT INTO users (updated_at, created_at, org_id, name, email, password_ldap, profile_image_url, password_hash, groups, api_key) VALUES (now(), now(), 1, 'aurelien.giudici', 'aurelien.giudici@adotmob.com', 'Test123', NULL, NULL, ARRAY[2], 'rQoemrJrEvRT3aR8pn8EfBT8vsesqKG0YwhQ53Za') RETURNING users.id
+2018-05-14 14:58:22.123 CEST [10337] ERROR:  duplicate key value violates unique constraint "users_org_id_email"
+2018-05-14 14:58:22.123 CEST [10337] DETAIL:  Key (org_id, email)=(1, aurelien.giudici@adotmob.com) already exists.
+2018-05-14 14:58:22.123 CEST [10337] STATEMENT:  INSERT INTO users (updated_at, created_at, org_id, name, email, password_ldap, profile_image_url, password_hash, groups, api_key) VALUES (now(), now(), 1, 'aurelien.giudici', 'aurelien.giudici@adotmob.com', 'Test123', NULL, NULL, ARRAY[2], 'MJk24IwIFQE9e92Ah5WWOnc2IrWmWonf34wCcC98') RETURNING users.id
+2018-05-14 17:40:24.171 CEST [15851] ERROR:  null value in column "data" violates not-null constraint
+2018-05-14 17:40:24.171 CEST [15851] DETAIL:  Failing row contains (11, 1, 1, 4de0ac6ee224fd599568b45267d5c712, Show Tables, null, 0.00232815742492676, 2018-05-14 17:40:24.167302+02).
+2018-05-14 17:40:24.171 CEST [15851] STATEMENT:  INSERT INTO query_results (org_id, data_source_id, query_hash, query, data, runtime, retrieved_at) VALUES (1, 1, '4de0ac6ee224fd599568b45267d5c712', 'Show Tables', NULL, 0.002328157424926758, '2018-05-14T15:40:24.167302+00:00'::timestamptz) RETURNING query_results.id
+2018-05-14 18:23:11.346 CEST [17542] ERROR:  null value in column "data" violates not-null constraint
+2018-05-14 18:23:11.346 CEST [17542] DETAIL:  Failing row contains (12, 1, 1, 4de0ac6ee224fd599568b45267d5c712, SHOW TABLES, null, 0.00260305404663086, 2018-05-14 18:23:11.342181+02).
+2018-05-14 18:23:11.346 CEST [17542] STATEMENT:  INSERT INTO query_results (org_id, data_source_id, query_hash, query, data, runtime, retrieved_at) VALUES (1, 1, '4de0ac6ee224fd599568b45267d5c712', 'SHOW TABLES', NULL, 0.0026030540466308594, '2018-05-14T16:23:11.342181+00:00'::timestamptz) RETURNING query_results.id
+2018-05-14 19:03:59.447 CEST [1808] LOG:  received smart shutdown request
+2018-05-14 19:03:59.449 CEST [1808] LOG:  worker process: logical replication launcher (PID 1815) exited with exit code 1
+2018-05-14 19:03:59.449 CEST [1810] LOG:  shutting down
+2018-05-14 19:03:59.454 CEST [1808] LOG:  database system is shut down

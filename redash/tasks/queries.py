@@ -12,7 +12,7 @@ from celery.utils.log import get_task_logger
 from redash import models, redis_connection, settings, statsd_client, utils
 from redash.query_runner import InterruptException
 from redash.utils import gen_query_hash
-from redash.worker import celery
+from redash.worker import celery, current_app
 from redash.tasks.alerts import check_alerts_for_query
 
 logger = get_task_logger(__name__)
@@ -515,11 +515,11 @@ class QueryExecutor(object):
 # user_id is added last as a keyword argument for backward compatability -- to support executing previously submitted
 # jobs before the upgrade to this version.
 @celery.task(name="redash.tasks.execute_query", bind=True, track_started=True)
-def execute_query(self, query, data_source_id, metadata, user_id=None,
-                  scheduled_query_id=None):
-    if scheduled_query_id is not None:
-        scheduled_query = models.Query.query.get(scheduled_query_id)
-    else:
-        scheduled_query = None
-    return QueryExecutor(self, query, data_source_id, user_id, metadata,
+def execute_query(self, query, data_source_id, metadata,
+                      user_id=None, scheduled_query_id=None):
+        if scheduled_query_id is not None:
+            scheduled_query = models.Query.query.get(scheduled_query_id)
+        else:
+            scheduled_query = None
+        return QueryExecutor(self, query, data_source_id, user_id, metadata,
                          scheduled_query).run()

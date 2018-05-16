@@ -14,6 +14,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_ipaddr
 from flask_migrate import Migrate
 
+
 from redash import settings
 from redash.query_runner import import_query_runners
 from redash.destinations import import_destinations
@@ -118,7 +119,6 @@ def create_app(load_admin=True):
         client = Client(settings.SENTRY_DSN, release=__version__, install_logging_hook=False)
         sentry = Sentry(app, client=client)
         sentry.client.release = __version__
-
         sentry_handler = SentryHandler(client=client)
         sentry_handler.setLevel(logging.ERROR)
         logging.getLogger().addHandler(sentry_handler)
@@ -126,7 +126,6 @@ def create_app(load_admin=True):
     # configure our database
     app.config['SQLALCHEMY_DATABASE_URI'] = settings.SQLALCHEMY_DATABASE_URI
     app.config.update(settings.all_settings())
-
     provision_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
@@ -139,3 +138,4 @@ def create_app(load_admin=True):
     configure_webpack(app)
     extensions.init_extensions(app)
     return app
+

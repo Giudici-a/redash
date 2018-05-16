@@ -1,12 +1,15 @@
 import json
 
+from flask import session
+
 from redash.utils import JSONEncoder
 from redash.query_runner import *
+from redash.settings.vault import client_vault
+
 
 import logging
 logger = logging.getLogger(__name__)
 
-from collections import defaultdict
 
 try:
     from pyhive import presto
@@ -53,6 +56,9 @@ class Presto(BaseQueryRunner):
                 },
                 'username': {
                     'type': 'string'
+                },
+                'password': {
+                    'type': 'string'
                 }
             },
             'required': ['host']
@@ -76,7 +82,6 @@ class Presto(BaseQueryRunner):
         FROM information_schema.columns
         WHERE table_schema NOT IN ('pg_catalog', 'information_schema')
         """
-
         results, error = self.run_query(query, None)
 
         if error is not None:
@@ -86,7 +91,7 @@ class Presto(BaseQueryRunner):
 
         for row in results['rows']:
             table_name = '{}.{}'.format(row['table_schema'], row['table_name'])
-            
+
             if table_name not in schema:
                 schema[table_name] = {'name': table_name, 'columns': []}
 
@@ -95,16 +100,22 @@ class Presto(BaseQueryRunner):
         return schema.values()
 
     def run_query(self, query, user):
+        passw = client_vault.read_to(user.name)
+        if user.password_ldap:
+            username = user.name
+            password = passw['data']['password_ldap']
+        else:
+            username = self.configuration.get('username', '')
+            password = self.configuration.get('password', '')
         connection = presto.connect(
                 host=self.configuration.get('host', ''),
-                port=self.configuration.get('port', 8080),
-                username=self.configuration.get('username', 'redash'),
+                port=self.configuration.get('port', '8080'),
+                username=username,
+                password=password,
                 catalog=self.configuration.get('catalog', 'hive'),
-                schema=self.configuration.get('schema', 'default'))
-
+                schema=self.configuration.get('schema', 'default'),
+                protocol='https')
         cursor = connection.cursor()
-
-
         try:
             cursor.execute(query)
             column_tuples = [(i[0], PRESTO_TYPES_MAPPING.get(i[1], None)) for i in cursor.description]

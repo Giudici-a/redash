@@ -25,6 +25,7 @@ def error_response(message):
 #             on the client side. Please don't reuse in other API handlers.
 #
 def run_query_sync(data_source, parameter_values, query_text, max_age=0):
+    print '-----run_query--------sync'
     query_parameters = set(collect_query_parameters(query_text))
     missing_params = set(query_parameters) - set(parameter_values.keys())
     if missing_params:
@@ -68,6 +69,7 @@ def run_query_sync(data_source, parameter_values, query_text, max_age=0):
         return None
 
 def run_query(data_source, parameter_values, query_text, query_id, max_age=0):
+    print '---------runnnn -query-----------------------------'
     query_parameters = set(collect_query_parameters(query_text))
     missing_params = set(query_parameters) - set(parameter_values.keys())
     if missing_params:
@@ -80,7 +82,6 @@ def run_query(data_source, parameter_values, query_text, query_id, max_age=0):
             message = '{} is paused. Please try later.'.format(data_source.name)
 
         return error_response(message)
-
     if query_parameters:
         query_text = pystache.render(query_text, parameter_values)
 
@@ -92,7 +93,7 @@ def run_query(data_source, parameter_values, query_text, query_id, max_age=0):
     if query_result:
         return {'query_result': query_result.to_dict()}
     else:
-        job = enqueue_query(query_text, data_source, current_user.id, metadata={"Username": current_user.email, "Query ID": query_id})
+        job = enqueue_query(query_text, data_source, current_user.id, metadata={'User': current_user.name, "Query ID": query_id})
         return {'job': job.to_dict()}
 
 
@@ -115,10 +116,8 @@ class QueryResultListResource(BaseResource):
         query_id = params.get('query_id', 'adhoc')
 
         data_source = models.DataSource.get_by_id_and_org(params.get('data_source_id'), self.current_org)
-
         if not has_access(data_source.groups, self.current_user, not_view_only):
             return {'job': {'status': 4, 'error': 'You do not have permission to run queries with this data source.'}}, 403
-
         self.record_event({
             'action': 'execute_query',
             'timestamp': int(time.time()),
@@ -194,7 +193,7 @@ class QueryResultResource(BaseResource):
                     query_result = run_query_sync(query.data_source, parameter_values, query.to_dict()['query'], max_age=max_age)
                 elif query.latest_query_data_id is not None:
                     query_result = get_object_or_404(models.QueryResult.get_by_id_and_org, query.latest_query_data_id, self.current_org)
-                
+
             if query is not None and query_result is not None and self.current_user.is_api_user():
                 if query.query_hash != query_result.query_hash:
                     abort(404, message='No cached result found for this query.')

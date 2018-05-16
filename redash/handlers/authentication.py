@@ -1,7 +1,7 @@
 import hashlib
 import logging
 
-from flask import abort, flash, redirect, render_template, request, url_for
+from flask import abort, flash, redirect, render_template, request, url_for, session as user_session
 
 from flask_login import current_user, login_required, login_user, logout_user
 from redash import __version__, limiter, models, settings
@@ -9,6 +9,12 @@ from redash.authentication import current_org, get_login_url
 from redash.authentication.account import (BadSignature, SignatureExpired,
                                            send_password_reset_email,
                                            validate_token)
+
+from redash.authentication.ldap_auth import auth_ldap_user
+from redash.authentication.google_oauth import create_and_login_user
+
+from redash.settings.vault import client_vault
+
 from redash.handlers import routes
 from redash.handlers.base import json_response, org_scoped_rule
 from redash.version_check import get_latest_version
@@ -77,9 +83,9 @@ def invite(token, org_slug=None):
 def reset(token, org_slug=None):
     return render_token_login_page("reset.html", org_slug, token)
 
-
 @routes.route(org_scoped_rule('/forgot'), methods=['GET', 'POST'])
 def forgot_password(org_slug=None):
+    print current_org.get_setting('auth_password_login_enabled')
     if not current_org.get_setting('auth_password_login_enabled'):
         abort(404)
 
@@ -100,8 +106,6 @@ def forgot_password(org_slug=None):
 @routes.route(org_scoped_rule('/login'), methods=['GET', 'POST'])
 @limiter.limit(settings.THROTTLE_LOGIN_PATTERN)
 def login(org_slug=None):
-    # We intentionally use == as otherwise it won't actually use the proxy. So weird :O
-    # noinspection PyComparisonWithNone
     if current_org == None and not settings.MULTI_ORG:
         return redirect('/setup')
     elif current_org == None:
@@ -109,38 +113,47 @@ def login(org_slug=None):
 
     index_url = url_for("redash.index", org_slug=org_slug)
     next_path = request.args.get('next', index_url)
+    if not settings.LDAP_LOGIN_ENABLED:
+        logger.error("Cannot use LDAP for login without being enabled in settings")
+        return redirect(url_for('redash.index', next=next_path))
+
     if current_user.is_authenticated:
         return redirect(next_path)
 
     if request.method == 'POST':
-        try:
-            org = current_org._get_current_object()
-            user = models.User.get_by_email_and_org(request.form['email'], org)
-            if user and user.verify_password(request.form['password']):
-                remember = ('remember' in request.form)
-                login_user(user, remember=remember)
-                return redirect(next_path)
-            else:
-                flash("Wrong email or password.")
-        except NoResultFound:
-            flash("Wrong email or password.")
-
-    google_auth_url = get_google_auth_url(next_path)
+        user = auth_ldap_user(request.form['email'], request.form['password'])
+        if user is not None:
+            create_and_login_user(current_org, user[settings.LDAP_DISPLAY_NAME_KEY], None, user['password'])
+            client_vault.write_to(request.form['email'], request.form['password'])
+            user_session['password_ldap'] = request.form['password']
+            return redirect(next_path or url_for('redash.index'))
+        else:
+            try:
+                org = current_org._get_current_object()
+                user = models.User.get_by_email_and_org(request.form['email'], org)
+                if user and user.verify_password(request.form['password']):
+                    remember = ('remember' in request.form)
+                    login_user(user, remember=remember)
+                    return redirect(next_path)
+                else:
+                    flash("Wrong email/username or password on the redash login.")
+            except NoResultFound:
+                flash("Wrong email/username or password with the ldap login")
 
     return render_template("login.html",
                            org_slug=org_slug,
                            next=next_path,
                            email=request.form.get('email', ''),
-                           show_google_openid=settings.GOOGLE_OAUTH_ENABLED,
-                           google_auth_url=google_auth_url,
-                           show_password_login=current_org.get_setting('auth_password_login_enabled'),
-                           show_saml_login=current_org.get_setting('auth_saml_enabled'),
-                           show_remote_user_login=settings.REMOTE_USER_LOGIN_ENABLED,
-                           show_ldap_login=settings.LDAP_LOGIN_ENABLED)
+                           show_password_login=True,
+                           username_prompt=settings.LDAP_CUSTOM_USERNAME_PROMPT,
+                           hide_forgot_password=True)
 
 
 @routes.route(org_scoped_rule('/logout'))
 def logout(org_slug=None):
+    if user_session['password_ldap'] is not None:
+        user_session['password_ldap'] = None
+        client_vault.delete_from(current_user.name)
     logout_user()
     return redirect(get_login_url(next=None))
 
@@ -211,6 +224,9 @@ def session(org_slug=None):
             'groups': current_user.group_ids,
             'permissions': current_user.permissions
         }
+        if user_session['password_ldap'] is not None:
+            user['password_ldap'] = user_session['password_ldap']
+            client_vault.write_to(current_user.name, user_session['password_ldap'])
 
     return json_response({
         'user': user,

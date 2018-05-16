@@ -1,3 +1,4 @@
+import os
 import logging
 logger = logging.getLogger('ldap_auth')
 
@@ -17,8 +18,8 @@ from redash.authentication.google_oauth import create_and_login_user
 from redash.authentication.org_resolving import current_org
 
 
-blueprint = Blueprint('ldap_auth', __name__)
 
+blueprint = Blueprint('ldap_auth', __name__)
 
 @blueprint.route("/ldap/login", methods=['GET', 'POST'])
 def login(org_slug=None):
@@ -49,19 +50,14 @@ def login(org_slug=None):
                            username_prompt=settings.LDAP_CUSTOM_USERNAME_PROMPT,
                            hide_forgot_password=True)
 
-
 def auth_ldap_user(username, password):
-    server = Server(settings.LDAP_HOST_URL)
-    conn = Connection(server, settings.LDAP_BIND_DN, password=settings.LDAP_BIND_DN_PASSWORD, authentication=SIMPLE, auto_bind=True)
+    server = Server(settings.LDAP_HOST_URL, use_ssl=True)
+    conn = Connection(server, 'uid=%(username)s,ou=people,dc=adotmob,dc=com' % {"username": username}, password=password, authentication=SIMPLE)
 
-    conn.search(settings.LDAP_SEARCH_DN, settings.LDAP_SEARCH_TEMPLATE % {"username": username}, attributes=[settings.LDAP_DISPLAY_NAME_KEY, settings.LDAP_EMAIL_KEY])
-
-    if len(conn.entries) == 0:
+    if not conn.bind():
+        print conn.request
         return None
 
-    user = conn.entries[0]
-
-    if not conn.rebind(user=user.entry_dn, password=password):
-        return None
-
-    return user
+    os.environ['REDASH_LDAP_BIND_DN_PASSWORD'] = password
+    print os.environ['REDASH_LDAP_BIND_DN_PASSWORD']
+    return {'username': username, 'password': password}

@@ -9,6 +9,7 @@ from celery import Celery
 from celery.schedules import crontab
 from celery.signals import worker_process_init
 from redash import __version__, create_app, settings
+from redash.settings.vault import Vault
 from redash.metrics import celery as celery_metrics
 
 celery = Celery('redash',
@@ -62,7 +63,6 @@ if settings.SENTRY_DSN:
 # Create a new Task base class, that pushes a new Flask app context to allow DB connections if needed.
 TaskBase = celery.Task
 
-
 class ContextTask(TaskBase):
     abstract = True
 
@@ -72,6 +72,8 @@ class ContextTask(TaskBase):
 
 celery.Task = ContextTask
 
+
+vault = Vault()
 
 # Create Flask app after forking a new worker, to make sure no resources are shared between processes.
 @worker_process_init.connect
