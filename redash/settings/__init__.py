@@ -17,9 +17,11 @@ def all_settings():
 REDIS_URL = os.environ.get('REDASH_REDIS_URL', os.environ.get('REDIS_URL', "redis://localhost:6379/0"))
 PROXIES_COUNT = int(os.environ.get('REDASH_PROXIES_COUNT', "1"))
 
-VAULT_URL = os.environ.get('VAULT_URL', 'http://127.0.0.1:8200')
+VAULT_URL = os.environ.get('VAULT_URL', 'https://vault.adotmob.com:8200')
 VAULT_TOKEN = os.environ.get('VAULT_TOKEN', '6dbdd4a1-8fc2-f8d6-0b49-407a6344a1db')
 VAULT_SECRET = os.environ.get('VAULT_SECRET', 'secret/redash/')
+VAULT_APPROLE_SECRET_ID = os.environ.get('VAULT_APPROLE_SECRET_ID')
+VAULT_APPROLE_ROLE_ID =os.environ.get('VAULT_APPROLE_ROLE_ID')
 
 
 STATSD_HOST = os.environ.get('REDASH_STATSD_HOST', "127.0.0.1")

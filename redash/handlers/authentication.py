@@ -85,7 +85,6 @@ def reset(token, org_slug=None):
 
 @routes.route(org_scoped_rule('/forgot'), methods=['GET', 'POST'])
 def forgot_password(org_slug=None):
-    print current_org.get_setting('auth_password_login_enabled')
     if not current_org.get_setting('auth_password_login_enabled'):
         abort(404)
 
