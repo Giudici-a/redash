@@ -1283,3 +1283,12 @@ Run initdb or pg_basebackup to initialize a PostgreSQL data directory.
 2018-05-18 09:03:20.441 CEST [1670] LOG:  database system is ready to accept connections
 2018-05-18 09:40:44.517 CEST [3397] LOG:  unexpected EOF on client connection with an open transaction
 2018-05-18 11:26:22.067 CEST [7289] LOG:  unexpected EOF on client connection with an open transaction
+2018-05-18 19:13:53.397 CEST [1670] LOG:  received smart shutdown request
+2018-05-18 19:13:53.402 CEST [1670] LOG:  worker process: logical replication launcher (PID 1677) exited with exit code 1
+2018-05-18 19:13:53.402 CEST [1672] LOG:  shutting down
+2018-05-18 19:13:53.410 CEST [1670] LOG:  database system is shut down
+2018-05-22 16:24:22.418 CEST [10698] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-22 16:24:22.418 CEST [10698] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-22 16:24:22.419 CEST [10698] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-22 16:24:22.447 CEST [10699] LOG:  database system was shut down at 2018-05-18 19:13:53 CEST
+2018-05-22 16:24:22.453 CEST [10698] LOG:  database system is ready to accept connections
